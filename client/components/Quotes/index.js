@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Quotes.less'
+import Headshots from 'components/Headshots'
 
 export default class Quotes extends Component {
   constructor (props) {
@@ -13,7 +14,9 @@ export default class Quotes extends Component {
   }
 
   componentWillMount () {
-    this.fetchRequest()
+    // setInterval(() => {
+      this.fetchRequest()  
+    // }, 7000)
   }
 
   fetchRequest () {
@@ -40,25 +43,28 @@ export default class Quotes extends Component {
           ? <div className={ styles.response }>
               <p className={ styles.text }> { this.state.quote.sqQuote } </p>
               <p className={ styles.author }> { this.state.quote.sqWho } </p>
+
+              <div className={ styles.options }>
+                <button 
+                  className={ styles.getQuote }
+                  onClick={ this.handleClick }
+                  >
+                    Next
+                </button>
+                <button
+                  className={ styles.social }
+                  id='tweet'>
+                  <img
+                    className={ styles.social }
+                    src='images/icon-twitter@2x.png'
+                    />
+                </button>
+              </div>
+              { this.state.quote.sqWho && <Headshots 
+                author={ this.state.quote.sqWho } /> }
             </div>
           : <h1 className={ styles.loading }>Loading...</h1>
         }
-        <div className={ styles.options }>
-          <button 
-            className={ styles.getQuote }
-            onClick={ this.handleClick }
-            >
-              Next
-          </button>
-          <button
-            className={ styles.social }
-            id='tweet'>
-            <img
-              className={ styles.social }
-              src='images/icon-twitter@2x.png'
-              />
-          </button>
-        </div>
       </div>
     )
   }
