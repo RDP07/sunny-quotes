@@ -1,0 +1,15 @@
+## Ignore
+.DS_Store
+.sketch
+
+node_modules
+npm-debug.log
+
+build
+reports/*
+
+public/js/*
+public/styles/*
+
+## Do Not Ignore
+!.keep
