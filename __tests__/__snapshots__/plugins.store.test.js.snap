@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Client / Store / Plugins Dispatch Activate Plugin dispatches activatePlugin action 1`] = `[Function]`;

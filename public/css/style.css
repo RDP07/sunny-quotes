@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.sunny {
+  background: #f7c315;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.title {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 22px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+}
+
+footer a {
+  color: #1D83D6;
+  text-decoration: none;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.columnFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 25px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.socialMedia {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 220px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialIcon,
+.socialIcon a {
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  vertical-align: middle
+}
+
+.socialIcon img {
+  width: 100%;
+}
+
+@media (min-width: 590px) {
+  .footerContainer {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .columnFooter {
+    width: 50%;
+    padding-bottom: 10px;
+  }
+}
