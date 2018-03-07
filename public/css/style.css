@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.sunny {
+html {
   background: #f7c315;
   height: 100%;
   width: 100%;
@@ -12,27 +12,43 @@
   position: relative;
 }
 
-body {
-  width: 100%;
-  margin: 0;
-}
-
 .header {
   width: 100%;
   text-align: center;
   margin: 0;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px
 }
 
 .title {
   font-family: 'Shadows Into Light', cursive;
-  font-size: 22px;
+  font-size: 26px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.page {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 100px);
+  width: 100%;
+  margin: 0;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 footer a {
@@ -43,7 +59,7 @@ footer a {
 .footerContainer {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 100%;
   color: #ffffff;
   text-align: center;
   font-size: 14px;
@@ -65,7 +81,7 @@ footer a {
   display: flex;
   list-style: none;
   padding: 0;
-  width: 220px;
+  width: 180px;
   justify-content: space-between;
   align-items: center;
 }
@@ -80,12 +96,6 @@ footer a {
 
 .socialIcon img {
   width: 100%;
-}
-
-@media (min-width: 590px) {
-  .footerContainer {
-    width: 90%;
-  }
 }
 
 @media (min-width: 768px) {

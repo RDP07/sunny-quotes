@@ -5,7 +5,7 @@ import Quotes from 'components/Quotes'
 export default class App extends Component {
   render () {
     return (
-      <div>
+      <div className={ styles.app }>
         <Quotes />
       </div>
     )
