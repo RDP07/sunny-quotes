@@ -8,7 +8,8 @@
     "start": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
     "clean": "rm -rf ./public/js",
     "build": "NODE_ENV=development webpack --config ./config/webpack/webpack.config.js -d --progress --profile",
-    "test": "mocha --compilers babel-core/register ./test/*test.js"
+    "test": "mocha --compilers babel-core/register ./test/*test.js",
+    "postinstall": "npm run build",
   },
   "keywords": [],
   "author": "RDP",
