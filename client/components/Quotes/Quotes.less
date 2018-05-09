@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
-@import '../../styles/variables';
+@import '../../styles/variables.less';
 
 .content {
   width: 100%;
@@ -10,7 +9,7 @@
 }
 
 .author {
-  font-family: 'Shadows Into Light', cursive, serif;
+  font-family: @font-written;
   color: black;
   font-size: 24px;
   font-weight: bold;
@@ -24,6 +23,7 @@
 .getQuote {
   background: black;
   border: 0px;
+  border-radius: @radius;
   color: #f7c315;
   font-size: 17px;
   vertical-align: middle;
@@ -31,6 +31,7 @@
 
 .social {
   background: transparent;
+  border-radius: @radius;
   width: 30px;
   height: 30px;
   border: none;
