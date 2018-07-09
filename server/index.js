@@ -31,6 +31,15 @@ app.use('/assets', express.static('public'))
 // Routes
 app.get('/', route)
 
+app.post('/update', function(req, res){
+  //take a message from Slack slash command
+  var query = req.body.text
+  console.log(query)
+  console.log(req)
+  console.log(res)
+  res.send(query)
+});
+
 // Dev vs Prod JS Serve
 if (!config.production) {
   app.use(webpackDevMiddleware(webpackCompiler, {
