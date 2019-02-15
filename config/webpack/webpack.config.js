@@ -3,8 +3,6 @@ const path = require('path');
 const rootDir = path.resolve(__dirname, './../../')
 const { paths } = require('./resolve.js')
 
-const { DefinePlugin, LoaderOptionsPlugin, HotModuleReplacementPlugin } = webpack
-
 module.exports = {
   resolve: {
     alias: paths,
@@ -42,7 +40,7 @@ module.exports = {
               importLoaders: 1,
             }
         }, {
-          loader: "less-loader", 
+          loader: "less-loader",
         }, {
           loader: 'postcss-loader',
             options: {
