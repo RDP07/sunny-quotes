@@ -8,7 +8,9 @@
     "start": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
     "clean": "rm -rf ./public/js",
     "build": "NODE_ENV=development webpack --config ./config/webpack/webpack.config.js -d --progress --profile",
-    "build:prod": "NODE_ENV=production webpack --config ./config/webpack/webpack.config.js -d --progress --profile"
+    "build:prod": "NODE_ENV=production webpack --config ./config/webpack/webpack.config.js -d --progress --profile",
+    "test": "mocha --compilers babel-core/register ./test/*test.js",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "RDP",
@@ -16,7 +18,7 @@
   "dependencies": {
     "express": "4.16.2",
     "fill-range": "5.0.0",
-    "fsevents": "^1.2.7",
+    "fsevents": "1.2.3",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "webpack-dev-middleware": "2.0.4"
@@ -26,21 +28,23 @@
     "babel-core": "6.26.3",
     "babel-loader": "7.1.2",
     "babel-polyfill": "6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
+    "chai": "4.1.2",
     "console-polyfill": "0.3.0",
     "css-loader": "0.28.9",
     "dotenv": "5.0.0",
-    "enzyme": "^3.8.0",
+    "enzyme": "3.3.0",
     "express-handlebars": "3.0.0",
     "less": "3.0.4",
     "less-loader": "4.0.5",
     "less-plugin-clean-css": "1.5.1",
-    "nodemon": "^1.18.10",
+    "mocha": "5.0.0",
+    "nodemon": "npm 1.14.12",
     "postcss-loader": "2.1.1",
     "prop-types": "15.6.1",
     "style-loader": "0.20.1",
-    "webpack": "^4.29.4",
-    "webpack-cli": "3.1.0"
+    "webpack": "4.8.1",
+    "webpack-cli": "2.1.3"
   }
 }
