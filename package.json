@@ -3,6 +3,9 @@
   "version": "2.0.2",
   "description": "It's Always Sunny in Philadelphia Quote Generator",
   "main": "index.js",
+  "engines": {
+    "node": "10.9.0"
+  },
   "scripts": {
     "watch": "npm run clean; npm run build; npm start",
     "start": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
