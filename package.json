@@ -21,7 +21,6 @@
   "dependencies": {
     "express": "4.16.2",
     "fill-range": "5.0.0",
-    "fsevents": "^1.2.7",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "webpack-dev-middleware": "2.0.4"
