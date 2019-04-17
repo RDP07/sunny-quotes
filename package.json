@@ -8,7 +8,8 @@
   },
   "scripts": {
     "watch": "npm run clean; npm run build; npm start",
-    "start": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
+    "start:dev": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
+    "start": "node -r dotenv/config server/index.js",
     "clean": "rm -rf ./public/js",
     "build": "NODE_ENV=development webpack --config ./config/webpack/webpack.config.js -d --progress --profile",
     "build:prod": "NODE_ENV=production webpack --config ./config/webpack/webpack.config.js -d --progress --profile",
