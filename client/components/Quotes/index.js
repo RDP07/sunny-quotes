@@ -13,10 +13,8 @@ export default class Quotes extends Component {
     }
   }
 
-  componentWillMount () {
-    // setInterval(() => {
-      this.fetchRequest()  
-    // }, 7000)
+  componentDidMount () {
+    this.fetchRequest()
   }
 
   fetchRequest () {
