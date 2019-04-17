@@ -40,7 +40,7 @@ module.exports = {
               importLoaders: 1,
             }
         }, {
-          loader: "less-loader", 
+          loader: "less-loader",
         }, {
           loader: 'postcss-loader',
             options: {
