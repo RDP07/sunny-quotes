@@ -7,11 +7,12 @@
     "node": "11.11.0"
   },
   "scripts": {
-    "watch": "npm run clean; npm run build && npm start:dev",
-    "start:dev": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
-    "start": "npm run build && ENV=prd NODE_ENV=production pm2-runtime start server/index.js",
+    "build": "webpack --config ./config/webpack/webpack.config.js -d --progress --profile",
     "clean": "rm -rf ./public/js",
-    "build": "webpack --config ./config/webpack/webpack.config.js -d --progress --profile"
+    "heroku-prebuild": "npm install --dev",
+    "start": "ENV=prd NODE_ENV=production pm2-runtime start server/index.js",
+    "start:dev": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
+    "watch": "npm run clean; npm run build && npm start:dev"
   },
   "keywords": [],
   "author": "RDP",
