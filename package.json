@@ -9,7 +9,7 @@
   "scripts": {
     "watch": "npm run clean; npm run build && npm start:dev",
     "start:dev": "nodemon -e js,handlebars --watch server -r dotenv/config server/index.js",
-    "start": "ENV=prd NODE_ENV=production pm2-runtime start server/index.js",
+    "start": "ENV=prd NODE_ENV=production node server/index.js",
     "clean": "rm -rf ./public/js",
     "build": "webpack --config ./config/webpack/webpack.config.js -d --progress --profile"
   },
@@ -23,8 +23,7 @@
     "fill-range": "5.0.0",
     "pm2": "^3.5.0",
     "react": "16.2.0",
-    "react-dom": "16.4.2",
-    "webpack": "4.29.5"
+    "react-dom": "16.4.2"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -45,6 +44,7 @@
     "postcss-loader": "2.1.1",
     "prop-types": "15.6.1",
     "style-loader": "0.20.1",
+    "webpack": "4.29.5",
     "webpack-cli": "3.2.3",
     "webpack-dev-middleware": "2.0.4"
   }
